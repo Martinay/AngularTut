@@ -3,7 +3,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ProductsService } from '../products.service';
 @Component({
-  selector: 'app-di-products',
   templateUrl: './di-products.component.html',
   styleUrls: ['./di-products.component.css']
 })

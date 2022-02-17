@@ -8,6 +8,7 @@ import { ProductsService } from './products.service';
 import { ProductsComponent } from './products/products.component';
 import { DiProductComponent } from './di-product/di-product.component';
 import { DiProductsComponent } from './di-products/di-products.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DiProductsComponent } from './di-products/di-products.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]
