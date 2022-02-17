@@ -1,0 +1,10 @@
+<h1>di -products</h1>
+
+<form (ngSubmit)="onAddProductForm(f)" #f="ngForm"> 
+    <!-- f grants access to form object created by angular -->
+    <input type="text" ngModel name="productNameGenerated" required>
+    <button type="submit">Add Product withing Form</button>
+</form>
+
+<h2>products:</h2>
+<app-di-product *ngFor="let product of products" [productName]="product" (productClicked)="onRemoveProduct(product)"></app-di-product>

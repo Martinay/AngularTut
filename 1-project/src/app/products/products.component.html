@@ -1,0 +1,16 @@
+<h1>My products</h1>
+<input type="text" [(ngModel)]="productName">
+<button (click)="isDisabled = !isDisabled">Disable</button>
+<div>{{ productName }}</div>
+
+<button (click)="onAddProduct()" [disabled]="isDisabled">Add Product</button>
+<button (click)="onAddProduct()" *ngIf="!isDisabled">Add Product</button>
+
+<form (ngSubmit)="onAddProductForm(f)" #f="ngForm"> 
+    <!-- f grants access to form object created by angular -->
+    <input type="text" ngModel name="productNameGenerated" required>
+    <button type="submit">Add Product withing Form</button>
+</form>
+
+<h1>products:</h1>
+<app-product *ngFor="let product of products" [productName]="product" (productClicked)="onRemoveProduct(product)"></app-product>
